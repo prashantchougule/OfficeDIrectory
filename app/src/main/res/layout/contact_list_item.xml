@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contactCardView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/people_cardview_height"
+    card_view:cardCornerRadius="@dimen/card_corner_radius"
+    card_view:cardElevation="@dimen/card_elevation"
+    card_view:cardUseCompatPadding="true"
+    android:layout_marginTop="@dimen/card_view_margin_top">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/card_view_padding">
+
+        <ImageView
+            android:id="@+id/avtar_imageview"
+            android:layout_width="@dimen/avtar_image_width"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"/>
+
+        <TextView
+            android:id="@+id/first_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/person_name_margin_start"
+            android:textSize="@dimen/list_header_text_size"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@+id/avtar_imageview"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="@dimen/person_name_margin_top" />
+
+        <TextView
+            android:id="@+id/last_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/person_name_margin_start"
+            android:textSize="@dimen/list_header_text_size"
+            android:textStyle="bold"
+            card_view:layout_constraintStart_toEndOf="@+id/first_name_textview"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="@dimen/person_name_margin_top" />
+
+        <TextView
+            android:id="@+id/jobtitle_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_sub_header_text_size"
+            android:layout_marginStart="@dimen/person_name_margin_start"
+            android:layout_marginTop="@dimen/job_title_text_margin_top"
+            card_view:layout_constraintStart_toEndOf="@+id/avtar_imageview"
+            card_view:layout_constraintTop_toBottomOf="@+id/first_name_textview" />
+
+        <TextView
+            android:id="@+id/email_key_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/email_key_text_margin_start"
+            android:textSize="@dimen/list_sub_header_text_size"
+            android:text="@string/email"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/avtar_imageview" />
+
+        <TextView
+            android:id="@+id/email_value_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_sub_header_text_size"
+            android:layout_marginStart="@dimen/email_key_text_margin_start"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toEndOf="@+id/email_key_textview" />
+
+        <TextView
+            android:id="@+id/fav_color_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_sub_header_text_size"
+            android:layout_marginStart="@dimen/fav_color_key_text_margin_start"
+            android:layout_marginBottom="@dimen/fav_color_text_margin_bottom"
+            android:text="@string/fav_color"
+            card_view:layout_constraintBottom_toTopOf="@+id/email_key_textview"
+            card_view:layout_constraintStart_toEndOf="@+id/avtar_imageview" />
+
+        <TextView
+            android:id="@+id/fav_color_value_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_sub_header_text_size"
+            android:layout_marginStart="@dimen/fav_color_key_text_margin_start"
+            android:layout_marginBottom="@dimen/fav_color_text_margin_bottom"
+            card_view:layout_constraintBottom_toTopOf="@+id/email_key_textview"
+            card_view:layout_constraintStart_toEndOf="@+id/fav_color_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

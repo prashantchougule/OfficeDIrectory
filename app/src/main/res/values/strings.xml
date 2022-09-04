@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OfficeDirectory</string>
+    <string name="email">Email: </string>
+    <string name="contact">Contact: </string>
+    <string name="room_id">Room Id: </string>
+    <string name="max_occupancy">Max Occupancy: </string>
+    <string name="people">People</string>
+    <string name="rooms">Rooms</string>
+    <string name="refresh">Refresh List</string>
+    <string name="fav_color">Favourite color</string>
+</resources>
